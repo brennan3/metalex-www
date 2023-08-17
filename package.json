@@ -10,6 +10,7 @@
     "test": "jest",
     "cdk": "cdk",
     "prepare": "husky install",
+    "test:e2e": "jest --config --passWithNoTests ./e2e/jest-e2e.json",
     "lint": "eslint . --ext .ts,.json"
   },
   "devDependencies": {
