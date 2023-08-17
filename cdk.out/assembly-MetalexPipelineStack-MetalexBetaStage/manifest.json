@@ -1,0 +1,131 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://646927670891/us-east-1",
+      "properties": {
+        "templateFile": "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.template.json",
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::646927670891:role/cdk-hnb659fds-deploy-role-646927670891-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::646927670891:role/cdk-hnb659fds-cfn-exec-role-646927670891-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-646927670891-us-east-1/42b78290925005daf13294635e8c33cf82aedc8927ac678d9a23df94cb400c55.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::646927670891:role/cdk-hnb659fds-lookup-role-646927670891-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "MetalexBetaStage-MetalexStack"
+      },
+      "dependencies": [
+        "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.assets"
+      ],
+      "metadata": {
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/WebsiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteBucket75C24D94"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/WebsiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteBucketPolicyE10E3262"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/ResponseHeadersPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ResponseHeadersPolicy13DBF9E0"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/ApiDistribution/Origin1/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDistributionOrigin1S3OriginADFE5A20"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/ApiDistribution/Origin2/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDistributionOrigin2S3OriginE891F094"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/ApiDistribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDistribution1DFA7F7C"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/StaticWebsiteFileDeploy/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticWebsiteFileDeployAwsCliLayer302FF3A2"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/StaticWebsiteFileDeploy/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticWebsiteFileDeployCustomResource4CDE9637"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/DistributionDomainName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistributionDomainName"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MetalexPipelineStack/MetalexBetaStage/MetalexStack"
+    }
+  }
+}

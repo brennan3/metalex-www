@@ -1,0 +1,75 @@
+digraph G {
+  # Arrows represent an "unlocks" relationship (opposite of dependency). So chosen
+  # because the layout looks more natural that way.
+  # To represent subgraph dependencies, subgraphs are represented by BEGIN/END nodes.
+  # To render: `dot -Tsvg MetalexPipelineStackPipelineBB712355.dot > graph.svg`, open in a browser.
+  node [shape="box"];
+"BEGIN Build" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Build" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Build.Synth";
+"Source.brennan3/metalex-www" -> "Build.Synth";
+"BEGIN Build" -> "Build.Synth";
+"Build.Synth" -> "END Build";
+"BEGIN UpdatePipeline" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END UpdatePipeline" [shape="cds", style="filled", fillcolor="#b7deff"];
+"UpdatePipeline.SelfMutate";
+"Build.Synth" -> "UpdatePipeline.SelfMutate";
+"BEGIN UpdatePipeline" -> "UpdatePipeline.SelfMutate";
+"UpdatePipeline.SelfMutate" -> "END UpdatePipeline";
+"BEGIN Assets" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Assets" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Assets.FileAsset1";
+"UpdatePipeline.SelfMutate" -> "Assets.FileAsset1";
+"Assets.FileAsset2";
+"UpdatePipeline.SelfMutate" -> "Assets.FileAsset2";
+"Assets.FileAsset3";
+"UpdatePipeline.SelfMutate" -> "Assets.FileAsset3";
+"BEGIN Assets" -> "Assets.FileAsset1";
+"BEGIN Assets" -> "Assets.FileAsset2";
+"BEGIN Assets" -> "Assets.FileAsset3";
+"Assets.FileAsset1" -> "END Assets";
+"Assets.FileAsset2" -> "END Assets";
+"Assets.FileAsset3" -> "END Assets";
+"BEGIN MetalexBetaStage" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END MetalexBetaStage" [shape="cds", style="filled", fillcolor="#b7deff"];
+"UpdatePipeline.SelfMutate" -> "BEGIN MetalexBetaStage";
+"BEGIN MetalexBetaStage.MetalexStack" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END MetalexBetaStage.MetalexStack" [shape="cds", style="filled", fillcolor="#b7deff"];
+"MetalexBetaStage.MetalexStack.Deploy";
+"MetalexBetaStage.MetalexStack.Prepare" -> "MetalexBetaStage.MetalexStack.Deploy";
+"MetalexBetaStage.MetalexStack.Prepare";
+"Build.Synth" -> "MetalexBetaStage.MetalexStack.Prepare";
+"Assets.FileAsset1" -> "MetalexBetaStage.MetalexStack.Prepare";
+"Assets.FileAsset2" -> "MetalexBetaStage.MetalexStack.Prepare";
+"Assets.FileAsset3" -> "MetalexBetaStage.MetalexStack.Prepare";
+"BEGIN MetalexBetaStage.MetalexStack" -> "MetalexBetaStage.MetalexStack.Prepare";
+"MetalexBetaStage.MetalexStack.Deploy" -> "END MetalexBetaStage.MetalexStack";
+"MetalexBetaStage.IntegrationTest";
+"MetalexBetaStage.MetalexStack.Deploy" -> "MetalexBetaStage.IntegrationTest";
+"END MetalexBetaStage.MetalexStack" -> "MetalexBetaStage.IntegrationTest";
+"Source.brennan3/metalex-www" -> "MetalexBetaStage.IntegrationTest";
+"BEGIN MetalexBetaStage" -> "BEGIN MetalexBetaStage.MetalexStack";
+"MetalexBetaStage.IntegrationTest" -> "END MetalexBetaStage";
+"BEGIN MetalexProdStage" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END MetalexProdStage" [shape="cds", style="filled", fillcolor="#b7deff"];
+"UpdatePipeline.SelfMutate" -> "BEGIN MetalexProdStage";
+"END MetalexBetaStage" -> "BEGIN MetalexProdStage";
+"BEGIN MetalexProdStage.MetalexStack" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END MetalexProdStage.MetalexStack" [shape="cds", style="filled", fillcolor="#b7deff"];
+"MetalexProdStage.MetalexStack.Deploy";
+"MetalexProdStage.MetalexStack.Prepare" -> "MetalexProdStage.MetalexStack.Deploy";
+"MetalexProdStage.MetalexStack.Prepare";
+"Build.Synth" -> "MetalexProdStage.MetalexStack.Prepare";
+"Assets.FileAsset1" -> "MetalexProdStage.MetalexStack.Prepare";
+"Assets.FileAsset2" -> "MetalexProdStage.MetalexStack.Prepare";
+"Assets.FileAsset3" -> "MetalexProdStage.MetalexStack.Prepare";
+"BEGIN MetalexProdStage.MetalexStack" -> "MetalexProdStage.MetalexStack.Prepare";
+"MetalexProdStage.MetalexStack.Deploy" -> "END MetalexProdStage.MetalexStack";
+"BEGIN MetalexProdStage" -> "BEGIN MetalexProdStage.MetalexStack";
+"END MetalexProdStage.MetalexStack" -> "END MetalexProdStage";
+"BEGIN Source" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Source" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Source.brennan3/metalex-www";
+"BEGIN Source" -> "Source.brennan3/metalex-www";
+"Source.brennan3/metalex-www" -> "END Source";
+}

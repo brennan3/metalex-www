@@ -1,0 +1,20 @@
+{
+  "version": "33.0.0",
+  "files": {
+    "54e5811ea9173cb7d9634e57b89560522f731f0bf28a88a56f6b6395d518bce2": {
+      "source": {
+        "path": "MetalexPipelineStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "904883826921-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-904883826921-us-east-1",
+          "objectKey": "54e5811ea9173cb7d9634e57b89560522f731f0bf28a88a56f6b6395d518bce2.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-file-publishing-role-904883826921-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

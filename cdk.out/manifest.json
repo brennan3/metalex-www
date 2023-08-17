@@ -1,0 +1,252 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "assembly-MetalexPipelineStack-MetalexBetaStage": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-MetalexPipelineStack-MetalexBetaStage",
+        "displayName": "MetalexPipelineStack/MetalexBetaStage"
+      }
+    },
+    "assembly-MetalexPipelineStack-MetalexProdStage": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-MetalexPipelineStack-MetalexProdStage",
+        "displayName": "MetalexPipelineStack/MetalexProdStage"
+      }
+    },
+    "MetalexPipelineStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MetalexPipelineStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MetalexPipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://904883826921/us-east-1",
+      "properties": {
+        "templateFile": "MetalexPipelineStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-deploy-role-904883826921-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-cfn-exec-role-904883826921-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-904883826921-us-east-1/54e5811ea9173cb7d9634e57b89560522f731f0bf28a88a56f6b6395d518bce2.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MetalexPipelineStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-lookup-role-904883826921-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "MetalexPipelineStack.assets"
+      ],
+      "metadata": {
+        "/MetalexPipelineStack/Pipeline/Pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyF5BF0670"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyAlias94A07392"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketPolicyF53CCC52"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Source/brennan3_metalex-www/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourcebrennan3metalexwwwCodePipelineActionRoleCB654DE5"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Source/brennan3_metalex-www/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourcebrennan3metalexwwwCodePipelineActionRoleDefaultPolicy7895BE41"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/MetalexBetaStage/IntegrationTest/IntegrationTest/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineMetalexBetaStageIntegrationTestRoleE6A468F9"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/MetalexBetaStage/IntegrationTest/IntegrationTest/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineMetalexBetaStageIntegrationTestRoleDefaultPolicy43F9E79A"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Pipeline/MetalexBetaStage/IntegrationTest/IntegrationTest/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineMetalexBetaStageIntegrationTest9FF81509"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/CodeBuildActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRole226DB0CB"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRoleDefaultPolicy1D62A6FE"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Assets/FileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRole59943A77"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRoleDefaultPolicy14DB8755"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Assets/FileAsset1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset185A67CB4"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Assets/FileAsset2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset24D2D639B"
+          }
+        ],
+        "/MetalexPipelineStack/Pipeline/Assets/FileAsset3/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset3FE71B523"
+          }
+        ],
+        "/MetalexPipelineStack/NotificationTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotificationTopicEB7A0DF1"
+          }
+        ],
+        "/MetalexPipelineStack/NotificationTopic/platform-engineering@delphidigital.io/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotificationTopicplatformengineeringdelphidigitalio1C8590B8"
+          }
+        ],
+        "/MetalexPipelineStack/NotificationTopic/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotificationTopicPolicyF935982E"
+          }
+        ],
+        "/MetalexPipelineStack/PipelineNotifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineNotifications84B145AD"
+          }
+        ],
+        "/MetalexPipelineStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MetalexPipelineStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MetalexPipelineStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MetalexPipelineStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

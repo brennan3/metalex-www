@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("source-map-support/register");
+const cdk = require("aws-cdk-lib");
+const metalex_pipeline_stack_1 = require("../lib/metalex-pipeline-stack");
+const app = new cdk.App();
+new metalex_pipeline_stack_1.MetalexPipelineStack(app, 'MetalexPipelineStack', {
+    env: { account: '904883826921', region: 'us-east-1' },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWV0YWxleC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm1ldGFsZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsdUNBQXFDO0FBQ3JDLG1DQUFtQztBQUNuQywwRUFBcUU7QUFFckUsTUFBTSxHQUFHLEdBQUcsSUFBSSxHQUFHLENBQUMsR0FBRyxFQUFFLENBQUM7QUFDMUIsSUFBSSw2Q0FBb0IsQ0FBQyxHQUFHLEVBQUUsc0JBQXNCLEVBQUU7SUFDcEQsR0FBRyxFQUFFLEVBQUUsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLEVBQUUsV0FBVyxFQUFFO0NBQ3RELENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIiMhL3Vzci9iaW4vZW52IG5vZGVcbmltcG9ydCAnc291cmNlLW1hcC1zdXBwb3J0L3JlZ2lzdGVyJztcbmltcG9ydCAqIGFzIGNkayBmcm9tICdhd3MtY2RrLWxpYic7XG5pbXBvcnQgeyBNZXRhbGV4UGlwZWxpbmVTdGFjayB9IGZyb20gJy4uL2xpYi9tZXRhbGV4LXBpcGVsaW5lLXN0YWNrJztcblxuY29uc3QgYXBwID0gbmV3IGNkay5BcHAoKTtcbm5ldyBNZXRhbGV4UGlwZWxpbmVTdGFjayhhcHAsICdNZXRhbGV4UGlwZWxpbmVTdGFjaycsIHtcbiAgZW52OiB7IGFjY291bnQ6ICc5MDQ4ODM4MjY5MjEnLCByZWdpb246ICd1cy1lYXN0LTEnIH0sXG59KTtcbiJdfQ==
