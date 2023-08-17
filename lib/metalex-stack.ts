@@ -12,7 +12,8 @@ import { Construct } from 'constructs';
 
 const ALLOW_ORIGINS = [
   'http://localhost:3000',
-  'https://miladyandmilady.com'
+  'https://miladyandmilady.com',
+  'https://www.miladyandmilady.com'
 ];
 
 const ALLOW_HEADERS = ['Access-Control-Request-Headers', 'Access-Control-Request-Method', 'Origin', 'authorization'];

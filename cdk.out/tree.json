@@ -2492,7 +2492,8 @@
                                   ],
                                   "allowedOrigins": [
                                     "http://localhost:3000",
-                                    "https://miladyandmilady.com"
+                                    "https://miladyandmilady.com",
+                                    "https://www.miladyandmilady.com"
                                   ]
                                 }
                               ]
@@ -2612,7 +2613,8 @@
                                 "accessControlAllowOrigins": {
                                   "items": [
                                     "http://localhost:3000",
-                                    "https://miladyandmilady.com"
+                                    "https://miladyandmilady.com",
+                                    "https://www.miladyandmilady.com"
                                   ]
                                 },
                                 "accessControlMaxAgeSec": 300,
@@ -3245,7 +3247,8 @@
                                   ],
                                   "allowedOrigins": [
                                     "http://localhost:3000",
-                                    "https://miladyandmilady.com"
+                                    "https://miladyandmilady.com",
+                                    "https://www.miladyandmilady.com"
                                   ]
                                 }
                               ]
@@ -3365,7 +3368,8 @@
                                 "accessControlAllowOrigins": {
                                   "items": [
                                     "http://localhost:3000",
-                                    "https://miladyandmilady.com"
+                                    "https://miladyandmilady.com",
+                                    "https://www.miladyandmilady.com"
                                   ]
                                 },
                                 "accessControlMaxAgeSec": 300,

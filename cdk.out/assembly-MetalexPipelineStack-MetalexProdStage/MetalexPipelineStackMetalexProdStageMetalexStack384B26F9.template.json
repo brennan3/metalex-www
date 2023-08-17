@@ -17,7 +17,8 @@
        ],
        "AllowedOrigins": [
         "http://localhost:3000",
-        "https://miladyandmilady.com"
+        "https://miladyandmilady.com",
+        "https://www.miladyandmilady.com"
        ]
       }
      ]
@@ -108,7 +109,8 @@
       "AccessControlAllowOrigins": {
        "Items": [
         "http://localhost:3000",
-        "https://miladyandmilady.com"
+        "https://miladyandmilady.com",
+        "https://www.miladyandmilady.com"
        ]
       },
       "AccessControlMaxAgeSec": 300,
