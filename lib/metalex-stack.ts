@@ -56,6 +56,7 @@ export class MetalexStack extends Stack {
     };
 
     const distribution = new cloudfront.Distribution(this, 'ApiDistribution', {
+      defaultRootObject: 'static/www/index.html',
       defaultBehavior: {
         ...commonDistributionBehaviors,
         origin: new origins.S3Origin(bucket),
