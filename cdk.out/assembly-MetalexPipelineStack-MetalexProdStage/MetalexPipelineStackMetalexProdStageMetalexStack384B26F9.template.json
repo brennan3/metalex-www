@@ -24,7 +24,7 @@
     },
     "Tags": [
      {
-      "Key": "aws-cdk:cr-owned:static/www:2787a290",
+      "Key": "aws-cdk:cr-owned:/:2787a290",
       "Value": "true"
      }
     ]
@@ -162,7 +162,7 @@
        ],
        "Compress": true,
        "OriginRequestPolicyId": "88a5eaf4-2fd4-4709-b370-b4c650ea3fcf",
-       "PathPattern": "/static/www*",
+       "PathPattern": "/*",
        "ResponseHeadersPolicyId": {
         "Ref": "ResponseHeadersPolicy13DBF9E0"
        },
@@ -190,6 +190,7 @@
       "TargetOriginId": "MetalexPipelineStackMetalexProdStageMetalexStackApiDistributionOrigin110B0A073",
       "ViewerProtocolPolicy": "redirect-to-https"
      },
+     "DefaultRootObject": "index.html",
      "Enabled": true,
      "HttpVersion": "http2",
      "IPV6Enabled": true,
@@ -274,12 +275,12 @@
      "cdk-hnb659fds-assets-074861143221-us-east-1"
     ],
     "SourceObjectKeys": [
-     "6b9e8a8dd503367e91fb3551375de6d133a832cdcfbab081377857159e10ff6a.zip"
+     "009948b649d6f030b14cfa582d3b789da89afd89bfeb772d1b9442f2b40a9575.zip"
     ],
     "DestinationBucketName": {
      "Ref": "WebsiteBucket75C24D94"
     },
-    "DestinationBucketKeyPrefix": "static/www",
+    "DestinationBucketKeyPrefix": "/",
     "Prune": true,
     "SystemMetadata": {
      "cache-control": "public, max-age=300"
@@ -288,7 +289,7 @@
      "Ref": "ApiDistribution1DFA7F7C"
     },
     "DistributionPaths": [
-     "/static/www*"
+     "/*"
     ]
    },
    "UpdateReplacePolicy": "Delete",

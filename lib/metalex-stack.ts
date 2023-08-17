@@ -56,13 +56,13 @@ export class MetalexStack extends Stack {
     };
 
     const distribution = new cloudfront.Distribution(this, 'ApiDistribution', {
-      defaultRootObject: 'static/www/index.html',
+      defaultRootObject: 'index.html',
       defaultBehavior: {
         ...commonDistributionBehaviors,
         origin: new origins.S3Origin(bucket),
       },
       additionalBehaviors: {
-        '/static/www*': {
+        '/*': {
           ...commonDistributionBehaviors,
           origin: new origins.S3Origin(bucket),
         }
@@ -85,9 +85,9 @@ export class MetalexStack extends Stack {
       sources: [s3deploy.Source.asset('./static/www')],
       cacheControl: [s3deploy.CacheControl.setPublic(), s3deploy.CacheControl.maxAge(Duration.minutes(5))],
       destinationBucket,
-      destinationKeyPrefix: 'static/www',
+      destinationKeyPrefix: '/',
       distribution,
-      distributionPaths: ['/static/www*'],
+      distributionPaths: ['/*'],
     });
   }
 }

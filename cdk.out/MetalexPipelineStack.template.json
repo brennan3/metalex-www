@@ -1755,7 +1755,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-MetalexPipelineStack-MetalexBetaStage/MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.assets.json\\\" --verbose publish \\\"6b9e8a8dd503367e91fb3551375de6d133a832cdcfbab081377857159e10ff6a:646927670891-us-east-1\\\"\",\n        \"cdk-assets --path \\\"assembly-MetalexPipelineStack-MetalexProdStage/MetalexPipelineStackMetalexProdStageMetalexStack384B26F9.assets.json\\\" --verbose publish \\\"6b9e8a8dd503367e91fb3551375de6d133a832cdcfbab081377857159e10ff6a:074861143221-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-MetalexPipelineStack-MetalexBetaStage/MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.assets.json\\\" --verbose publish \\\"009948b649d6f030b14cfa582d3b789da89afd89bfeb772d1b9442f2b40a9575:646927670891-us-east-1\\\"\",\n        \"cdk-assets --path \\\"assembly-MetalexPipelineStack-MetalexProdStage/MetalexPipelineStackMetalexProdStageMetalexStack384B26F9.assets.json\\\" --verbose publish \\\"009948b649d6f030b14cfa582d3b789da89afd89bfeb772d1b9442f2b40a9575:074861143221-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     }
    },
