@@ -1,7 +1,7 @@
 {
   "version": "33.0.0",
   "files": {
-    "be5c7aaf632437ef75234015ea76603b39de8ee06d610a61a4e51b1b6d44a543": {
+    "bb76992a2306c36e8579767f9dec74b51cbb2cb015d2f5984376ad7db0a66874": {
       "source": {
         "path": "MetalexPipelineStack.template.json",
         "packaging": "file"
@@ -9,7 +9,7 @@
       "destinations": {
         "904883826921-us-east-1": {
           "bucketName": "cdk-hnb659fds-assets-904883826921-us-east-1",
-          "objectKey": "be5c7aaf632437ef75234015ea76603b39de8ee06d610a61a4e51b1b6d44a543.json",
+          "objectKey": "bb76992a2306c36e8579767f9dec74b51cbb2cb015d2f5984376ad7db0a66874.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-file-publishing-role-904883826921-us-east-1"
         }

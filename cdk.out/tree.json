@@ -4076,17 +4076,17 @@
                   "version": "2.92.0"
                 }
               },
-              "platform-engineering@delphidigital.io": {
-                "id": "platform-engineering@delphidigital.io",
-                "path": "MetalexPipelineStack/NotificationTopic/platform-engineering@delphidigital.io",
+              "metalex-tech@googlegroups.com": {
+                "id": "metalex-tech@googlegroups.com",
+                "path": "MetalexPipelineStack/NotificationTopic/metalex-tech@googlegroups.com",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "MetalexPipelineStack/NotificationTopic/platform-engineering@delphidigital.io/Resource",
+                    "path": "MetalexPipelineStack/NotificationTopic/metalex-tech@googlegroups.com/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
                       "aws:cdk:cloudformation:props": {
-                        "endpoint": "platform-engineering@delphidigital.io",
+                        "endpoint": "metalex-tech@googlegroups.com",
                         "protocol": "email",
                         "topicArn": {
                           "Ref": "NotificationTopicEB7A0DF1"

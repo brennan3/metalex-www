@@ -10,8 +10,14 @@ import {
   import { Construct } from 'constructs';
   import { MetalexStage } from './metalex-stage';
   
-  const PIPELINE_NOTIFICATION_EMAIL = 'platform-engineering@delphidigital.io';
+  const PIPELINE_NOTIFICATION_EMAIL = 'metalex-tech@googlegroups.com';
   
+  const BETA_DOMAIN_NAME = 'miladyandmilady.dev';
+  const BETA_SUBJECT_ALTERNATIVE_NAMES = ['www.miladyandmilady.dev'];
+
+  const PROD_DOMAIN_NAME = 'miladyandmilady.com';
+  const PROD_SUBJECT_ALTERNATIVE_NAMES = ['www.miladyandmilady.com'];
+
   export class MetalexPipelineStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
       super(scope, id, props);
@@ -31,8 +37,8 @@ import {
       });
   
       const beta = new MetalexStage(this, 'MetalexBetaStage', {
-        domainName: 'miladyandmilady.dev',
-        subjectAlternativeNames: ['www.miladyandmilady.dev'],
+        domainName: BETA_DOMAIN_NAME,
+        subjectAlternativeNames: BETA_SUBJECT_ALTERNATIVE_NAMES,
         env: { account: '646927670891', region: 'us-east-1' },
       });
       pipeline.addStage(beta).addPost(
@@ -48,8 +54,8 @@ import {
   
       // TODO: add prod stage once account limit is increased
       const prod = new MetalexStage(this, 'MetalexProdStage', {
-        domainName: 'miladyandmilady.com',
-        subjectAlternativeNames: ['www.miladyandmilady.com'],
+        domainName: PROD_DOMAIN_NAME,
+        subjectAlternativeNames: PROD_SUBJECT_ALTERNATIVE_NAMES,
         env: { account: '074861143221', region: 'us-east-1' },
       });
       pipeline.addStage(prod);

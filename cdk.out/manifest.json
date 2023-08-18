@@ -31,7 +31,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-deploy-role-904883826921-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::904883826921:role/cdk-hnb659fds-cfn-exec-role-904883826921-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-904883826921-us-east-1/be5c7aaf632437ef75234015ea76603b39de8ee06d610a61a4e51b1b6d44a543.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-904883826921-us-east-1/bb76992a2306c36e8579767f9dec74b51cbb2cb015d2f5984376ad7db0a66874.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -203,10 +203,10 @@
             "data": "NotificationTopicEB7A0DF1"
           }
         ],
-        "/MetalexPipelineStack/NotificationTopic/platform-engineering@delphidigital.io/Resource": [
+        "/MetalexPipelineStack/NotificationTopic/metalex-tech@googlegroups.com/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "NotificationTopicplatformengineeringdelphidigitalio1C8590B8"
+            "data": "NotificationTopicmetalextechgooglegroupscomF7955EDA"
           }
         ],
         "/MetalexPipelineStack/NotificationTopic/Policy/Resource": [

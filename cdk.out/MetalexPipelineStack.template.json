@@ -1769,17 +1769,17 @@
     "aws:cdk:path": "MetalexPipelineStack/NotificationTopic/Resource"
    }
   },
-  "NotificationTopicplatformengineeringdelphidigitalio1C8590B8": {
+  "NotificationTopicmetalextechgooglegroupscomF7955EDA": {
    "Type": "AWS::SNS::Subscription",
    "Properties": {
-    "Endpoint": "platform-engineering@delphidigital.io",
+    "Endpoint": "metalex-tech@googlegroups.com",
     "Protocol": "email",
     "TopicArn": {
      "Ref": "NotificationTopicEB7A0DF1"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MetalexPipelineStack/NotificationTopic/platform-engineering@delphidigital.io/Resource"
+    "aws:cdk:path": "MetalexPipelineStack/NotificationTopic/metalex-tech@googlegroups.com/Resource"
    }
   },
   "NotificationTopicPolicyF935982E": {
