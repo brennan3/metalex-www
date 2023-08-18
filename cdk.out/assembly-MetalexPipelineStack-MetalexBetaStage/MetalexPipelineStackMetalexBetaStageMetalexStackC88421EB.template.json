@@ -169,7 +169,8 @@
    "Properties": {
     "DistributionConfig": {
      "Aliases": [
-      "miladyandmilady.dev"
+      "miladyandmilady.dev",
+      "www.miladyandmilady.dev"
      ],
      "CacheBehaviors": [
       {

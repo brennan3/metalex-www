@@ -66,7 +66,7 @@ export class MetalexStack extends Stack {
 
     const distribution = new cloudfront.Distribution(this, 'ApiDistribution', {
       certificate: cert,
-      domainNames: [domain],
+      domainNames: [domain, ...subjectAlternativeNames],
       defaultRootObject: 'index.html',
       defaultBehavior: {
         ...commonDistributionBehaviors,

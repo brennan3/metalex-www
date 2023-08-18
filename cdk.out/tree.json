@@ -2820,7 +2820,8 @@
                                 "viewerProtocolPolicy": "redirect-to-https"
                               },
                               "aliases": [
-                                "miladyandmilady.dev"
+                                "miladyandmilady.dev",
+                                "www.miladyandmilady.dev"
                               ],
                               "cacheBehaviors": [
                                 {
@@ -3619,7 +3620,8 @@
                                 "viewerProtocolPolicy": "redirect-to-https"
                               },
                               "aliases": [
-                                "miladyandmilady.com"
+                                "miladyandmilady.com",
+                                "www.miladyandmilady.com"
                               ],
                               "cacheBehaviors": [
                                 {
