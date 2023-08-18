@@ -2493,7 +2493,9 @@
                                   "allowedOrigins": [
                                     "http://localhost:3000",
                                     "https://miladyandmilady.com",
-                                    "https://www.miladyandmilady.com"
+                                    "https://www.miladyandmilady.com",
+                                    "https://miladyandmilady.dev",
+                                    "https://www.miladyandmilady.dev"
                                   ]
                                 }
                               ]
@@ -2648,7 +2650,9 @@
                                   "items": [
                                     "http://localhost:3000",
                                     "https://miladyandmilady.com",
-                                    "https://www.miladyandmilady.com"
+                                    "https://www.miladyandmilady.com",
+                                    "https://miladyandmilady.dev",
+                                    "https://www.miladyandmilady.dev"
                                   ]
                                 },
                                 "accessControlMaxAgeSec": 300,
@@ -3293,7 +3297,9 @@
                                   "allowedOrigins": [
                                     "http://localhost:3000",
                                     "https://miladyandmilady.com",
-                                    "https://www.miladyandmilady.com"
+                                    "https://www.miladyandmilady.com",
+                                    "https://miladyandmilady.dev",
+                                    "https://www.miladyandmilady.dev"
                                   ]
                                 }
                               ]
@@ -3448,7 +3454,9 @@
                                   "items": [
                                     "http://localhost:3000",
                                     "https://miladyandmilady.com",
-                                    "https://www.miladyandmilady.com"
+                                    "https://www.miladyandmilady.com",
+                                    "https://miladyandmilady.dev",
+                                    "https://www.miladyandmilady.dev"
                                   ]
                                 },
                                 "accessControlMaxAgeSec": 300,
