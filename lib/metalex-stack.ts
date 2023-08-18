@@ -30,19 +30,19 @@ const getDefaultBucketCorsSettings = () => ({
 });
 
 export interface MetalexStackProps extends StackProps {
-  domain: string,
+  domainName: string,
   subjectAlternativeNames: string[]
 }
 
 export class MetalexStack extends Stack {
   readonly distributionDomainName: CfnOutput;
 
-  constructor(scope: Construct, id: string, { domain, subjectAlternativeNames, ...props }: MetalexStackProps) {
+  constructor(scope: Construct, id: string, { domainName, subjectAlternativeNames, ...props }: MetalexStackProps) {
     super(scope, id, props);
 
     const bucket = this.setupWebsiteBucket();
 
-    const cert = this.setupCertification(domain, subjectAlternativeNames);
+    const cert = this.setupCertification(domainName, subjectAlternativeNames);
     
     const staticWebsiteResponseHeadersPolicy = new cloudfront.ResponseHeadersPolicy(this, 'ResponseHeadersPolicy', {
       responseHeadersPolicyName: 'StaticDataApiResponseHeadersPolicy',
@@ -66,7 +66,7 @@ export class MetalexStack extends Stack {
 
     const distribution = new cloudfront.Distribution(this, 'ApiDistribution', {
       certificate: cert,
-      domainNames: [domain, ...subjectAlternativeNames],
+      domainNames: [domainName, ...subjectAlternativeNames],
       defaultRootObject: 'index.html',
       defaultBehavior: {
         ...commonDistributionBehaviors,
