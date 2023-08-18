@@ -30,18 +30,19 @@ const getDefaultBucketCorsSettings = () => ({
 });
 
 export interface MetalexStackProps extends StackProps {
-  domain: string
+  domain: string,
+  subjectAlternativeNames: string[]
 }
 
 export class MetalexStack extends Stack {
   readonly distributionDomainName: CfnOutput;
 
-  constructor(scope: Construct, id: string, { domain, ...props }: MetalexStackProps) {
+  constructor(scope: Construct, id: string, { domain, subjectAlternativeNames, ...props }: MetalexStackProps) {
     super(scope, id, props);
 
     const bucket = this.setupWebsiteBucket();
 
-    const cert = this.setupCertification(domain);
+    const cert = this.setupCertification(domain, subjectAlternativeNames);
     
     const staticWebsiteResponseHeadersPolicy = new cloudfront.ResponseHeadersPolicy(this, 'ResponseHeadersPolicy', {
       responseHeadersPolicyName: 'StaticDataApiResponseHeadersPolicy',
@@ -90,10 +91,11 @@ export class MetalexStack extends Stack {
     return new s3.Bucket(this, 'WebsiteBucket', { ...getDefaultBucketCorsSettings() });
   }
 
-  setupCertification(domainName: string) {
+  setupCertification(domainName: string, subjectAlternativeNames: string[]) {
     // if domain is in r53, the dns validationr records will be auto created
     return new aws_certificatemanager.Certificate(this, 'Certificate', {
       domainName,
+      subjectAlternativeNames: subjectAlternativeNames,
       validation: aws_certificatemanager.CertificateValidation.fromDns(), // Records must be added manually
     });
   }

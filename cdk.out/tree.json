@@ -2592,7 +2592,10 @@
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::CertificateManager::Certificate",
                           "aws:cdk:cloudformation:props": {
-                            "domainName": "www.miladyandmilady.dev",
+                            "domainName": "miladyandmilady.dev",
+                            "subjectAlternativeNames": [
+                              "www.miladyandmilady.dev"
+                            ],
                             "tags": [
                               {
                                 "key": "Name",
@@ -2817,7 +2820,7 @@
                                 "viewerProtocolPolicy": "redirect-to-https"
                               },
                               "aliases": [
-                                "www.miladyandmilady.dev"
+                                "miladyandmilady.dev"
                               ],
                               "cacheBehaviors": [
                                 {
@@ -3388,7 +3391,10 @@
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::CertificateManager::Certificate",
                           "aws:cdk:cloudformation:props": {
-                            "domainName": "www.miladyandmilady.com",
+                            "domainName": "miladyandmilady.com",
+                            "subjectAlternativeNames": [
+                              "www.miladyandmilady.com"
+                            ],
                             "tags": [
                               {
                                 "key": "Name",
@@ -3613,7 +3619,7 @@
                                 "viewerProtocolPolicy": "redirect-to-https"
                               },
                               "aliases": [
-                                "www.miladyandmilady.com"
+                                "miladyandmilady.com"
                               ],
                               "cacheBehaviors": [
                                 {

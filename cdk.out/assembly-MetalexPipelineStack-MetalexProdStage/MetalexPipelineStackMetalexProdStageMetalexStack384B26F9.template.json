@@ -89,7 +89,10 @@
   "Certificate4E7ABB08": {
    "Type": "AWS::CertificateManager::Certificate",
    "Properties": {
-    "DomainName": "www.miladyandmilady.com",
+    "DomainName": "miladyandmilady.com",
+    "SubjectAlternativeNames": [
+     "www.miladyandmilady.com"
+    ],
     "Tags": [
      {
       "Key": "Name",
@@ -166,7 +169,7 @@
    "Properties": {
     "DistributionConfig": {
      "Aliases": [
-      "www.miladyandmilady.com"
+      "miladyandmilady.com"
      ],
      "CacheBehaviors": [
       {

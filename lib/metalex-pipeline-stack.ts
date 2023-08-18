@@ -31,7 +31,8 @@ import {
       });
   
       const beta = new MetalexStage(this, 'MetalexBetaStage', {
-        domain: 'www.miladyandmilady.dev',
+        domain: 'miladyandmilady.dev',
+        subjectAlternativeNames: ['www.miladyandmilady.dev'],
         env: { account: '646927670891', region: 'us-east-1' },
       });
       pipeline.addStage(beta).addPost(
@@ -47,7 +48,8 @@ import {
   
       // TODO: add prod stage once account limit is increased
       const prod = new MetalexStage(this, 'MetalexProdStage', {
-        domain: 'www.miladyandmilady.com',
+        domain: 'miladyandmilady.com',
+        subjectAlternativeNames: ['www.miladyandmilady.com'],
         env: { account: '074861143221', region: 'us-east-1' },
       });
       pipeline.addStage(prod);
