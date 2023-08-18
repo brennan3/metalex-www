@@ -2582,6 +2582,37 @@
                       "version": "2.92.0"
                     }
                   },
+                  "Certificate": {
+                    "id": "Certificate",
+                    "path": "MetalexPipelineStack/MetalexBetaStage/MetalexStack/Certificate",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MetalexPipelineStack/MetalexBetaStage/MetalexStack/Certificate/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CertificateManager::Certificate",
+                          "aws:cdk:cloudformation:props": {
+                            "domainName": "www.miladyandmilady.dev",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "MetalexPipelineStack/MetalexBetaStage/MetalexStack/Certificate"
+                              }
+                            ],
+                            "validationMethod": "DNS"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_certificatemanager.CfnCertificate",
+                          "version": "2.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_certificatemanager.Certificate",
+                      "version": "2.92.0"
+                    }
+                  },
                   "ResponseHeadersPolicy": {
                     "id": "ResponseHeadersPolicy",
                     "path": "MetalexPipelineStack/MetalexBetaStage/MetalexStack/ResponseHeadersPolicy",
@@ -2785,6 +2816,9 @@
                                 },
                                 "viewerProtocolPolicy": "redirect-to-https"
                               },
+                              "aliases": [
+                                "www.miladyandmilady.dev"
+                              ],
                               "cacheBehaviors": [
                                 {
                                   "pathPattern": "/*",
@@ -2810,7 +2844,14 @@
                               ],
                               "defaultRootObject": "index.html",
                               "httpVersion": "http2",
-                              "ipv6Enabled": true
+                              "ipv6Enabled": true,
+                              "viewerCertificate": {
+                                "acmCertificateArn": {
+                                  "Ref": "Certificate4E7ABB08"
+                                },
+                                "minimumProtocolVersion": "TLSv1.2_2021",
+                                "sslSupportMethod": "sni-only"
+                              }
                             }
                           }
                         },
@@ -3337,6 +3378,37 @@
                       "version": "2.92.0"
                     }
                   },
+                  "Certificate": {
+                    "id": "Certificate",
+                    "path": "MetalexPipelineStack/MetalexProdStage/MetalexStack/Certificate",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MetalexPipelineStack/MetalexProdStage/MetalexStack/Certificate/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CertificateManager::Certificate",
+                          "aws:cdk:cloudformation:props": {
+                            "domainName": "www.miladyandmilady.com",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "MetalexPipelineStack/MetalexProdStage/MetalexStack/Certificate"
+                              }
+                            ],
+                            "validationMethod": "DNS"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_certificatemanager.CfnCertificate",
+                          "version": "2.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_certificatemanager.Certificate",
+                      "version": "2.92.0"
+                    }
+                  },
                   "ResponseHeadersPolicy": {
                     "id": "ResponseHeadersPolicy",
                     "path": "MetalexPipelineStack/MetalexProdStage/MetalexStack/ResponseHeadersPolicy",
@@ -3540,6 +3612,9 @@
                                 },
                                 "viewerProtocolPolicy": "redirect-to-https"
                               },
+                              "aliases": [
+                                "www.miladyandmilady.com"
+                              ],
                               "cacheBehaviors": [
                                 {
                                   "pathPattern": "/*",
@@ -3565,7 +3640,14 @@
                               ],
                               "defaultRootObject": "index.html",
                               "httpVersion": "http2",
-                              "ipv6Enabled": true
+                              "ipv6Enabled": true,
+                              "viewerCertificate": {
+                                "acmCertificateArn": {
+                                  "Ref": "Certificate4E7ABB08"
+                                },
+                                "minimumProtocolVersion": "TLSv1.2_2021",
+                                "sslSupportMethod": "sni-only"
+                              }
                             }
                           }
                         },

@@ -86,6 +86,22 @@
     "aws:cdk:path": "MetalexPipelineStack/MetalexProdStage/MetalexStack/WebsiteBucket/Policy/Resource"
    }
   },
+  "Certificate4E7ABB08": {
+   "Type": "AWS::CertificateManager::Certificate",
+   "Properties": {
+    "DomainName": "www.miladyandmilady.com",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "MetalexPipelineStack/MetalexProdStage/MetalexStack/Certificate"
+     }
+    ],
+    "ValidationMethod": "DNS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MetalexPipelineStack/MetalexProdStage/MetalexStack/Certificate/Resource"
+   }
+  },
   "ResponseHeadersPolicy13DBF9E0": {
    "Type": "AWS::CloudFront::ResponseHeadersPolicy",
    "Properties": {
@@ -149,6 +165,9 @@
    "Type": "AWS::CloudFront::Distribution",
    "Properties": {
     "DistributionConfig": {
+     "Aliases": [
+      "www.miladyandmilady.com"
+     ],
      "CacheBehaviors": [
       {
        "AllowedMethods": [
@@ -241,7 +260,14 @@
         }
        }
       }
-     ]
+     ],
+     "ViewerCertificate": {
+      "AcmCertificateArn": {
+       "Ref": "Certificate4E7ABB08"
+      },
+      "MinimumProtocolVersion": "TLSv1.2_2021",
+      "SslSupportMethod": "sni-only"
+     }
     }
    },
    "Metadata": {
@@ -451,7 +477,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/3VRwW7CMAz9lt1DxuCyHaEIbdIkJpB2rdLEVKZpUsXJEKr673NboBy2k18c+/k9eyHfFnL+pM4006aaWSxke4hKV4JTeUtL2a6TriCK7OiuaAxf3qK+TOnre3ysFUEntPXJHIN3UbZ7oMY7gndQBgJN3X9/bJBiwCJF9E7sApboVloD0YcBFzEOrVnPv+35/6t4pOkELfPWQGP9peYSOUrd3BNCEUEkuepDJ6yqC6NkyzSf6gLhm9X1ag7oSgvRu21yetB3B1x6w51AVbNtb2Fw2cfJ9Ii625Dc9gNyXrm2KFdnyiwOM8WghQ/C7kqRJYq+5oX5FDRclzfix+QuxSaxAecNyBM9/7y8yjkf+USIs5B4OTXI/Rh/AdkqwiYAAgAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/3VSTW/CMAz9LbuHjMFlO0IR2qRJTCDtWoXErQxpguJkqKr63+d+QDlsJz+/+OvZWci3hZw/qSvNtDnPLB5lc4hKnwVTeUNL2ayTPkMUWeFGNJgvb1HXEz36g7NWBK3QECIWqFWESjlVQpBNNnFd7oPL8dYnUwTvomz2QBfvCN5BGQg0dfv7YYMUAx5TRO/ELmCJbqU1EH0YcBFjn5p19bdd/f8iHsu0gpZ5Y+BifV1xiBykbe6EUEQQSa460wqrqqNRrLBwn6qG8M3TddMc0JUWonfb5HQ/3x1w6A23AlXFsr3t99LbSfSA2luT3HYNcj6RtihXV8os9j1FPwsfkNWVIksUfcUL8yloGJc34Edyl+IlsQDnDcgTPf+8vMo5f4oTIc5C4uVUIPeD/QW7aI+bMAIAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "MetalexPipelineStack/MetalexProdStage/MetalexStack/CDKMetadata/Default"

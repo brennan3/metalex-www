@@ -17,7 +17,7 @@
         "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::646927670891:role/cdk-hnb659fds-deploy-role-646927670891-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::646927670891:role/cdk-hnb659fds-cfn-exec-role-646927670891-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-646927670891-us-east-1/e48217b37c4ef85be9b448ce5bed1832e01a2bff039f9468a9f1877cc57fdee1.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-646927670891-us-east-1/95d02f01427e9e38b1a8df50e44667e762b9ccaeafc6e1b80941d8aed51b9aab.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -44,6 +44,12 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "WebsiteBucketPolicyE10E3262"
+          }
+        ],
+        "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/Certificate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Certificate4E7ABB08"
           }
         ],
         "/MetalexPipelineStack/MetalexBetaStage/MetalexStack/ResponseHeadersPolicy/Resource": [

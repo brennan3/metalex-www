@@ -43,7 +43,7 @@
         }
       }
     },
-    "e48217b37c4ef85be9b448ce5bed1832e01a2bff039f9468a9f1877cc57fdee1": {
+    "95d02f01427e9e38b1a8df50e44667e762b9ccaeafc6e1b80941d8aed51b9aab": {
       "source": {
         "path": "MetalexPipelineStackMetalexBetaStageMetalexStackC88421EB.template.json",
         "packaging": "file"
@@ -51,7 +51,7 @@
       "destinations": {
         "646927670891-us-east-1": {
           "bucketName": "cdk-hnb659fds-assets-646927670891-us-east-1",
-          "objectKey": "e48217b37c4ef85be9b448ce5bed1832e01a2bff039f9468a9f1877cc57fdee1.json",
+          "objectKey": "95d02f01427e9e38b1a8df50e44667e762b9ccaeafc6e1b80941d8aed51b9aab.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::646927670891:role/cdk-hnb659fds-file-publishing-role-646927670891-us-east-1"
         }
