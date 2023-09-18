@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/****************************************************** */
+/******************** 01. Default CSS ***************** */
+/****************************************************** */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@font-face {
+    font-family: 'ChineRocksRg';
+    src: url('../fonts/chinese-rocks-rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-color: #000000;
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: #1d1f39;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/spiral-css-preloader.gif);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'ChineRocksRg', sans-serif;
+    font-size: 4rem;
+    color: #ffffff;
+}

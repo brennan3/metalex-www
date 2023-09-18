@@ -12,11 +12,11 @@ import {
   
   const PIPELINE_NOTIFICATION_EMAIL = 'metalex-tech@googlegroups.com';
   
-  const BETA_DOMAIN_NAME = 'miladyandmilady.dev';
-  const BETA_SUBJECT_ALTERNATIVE_NAMES = ['www.miladyandmilady.dev'];
+  const BETA_DOMAIN_NAME = 'beta.lexpunk.pro';
+  const BETA_SUBJECT_ALTERNATIVE_NAMES = ['beta.www.lexpunk.pro'];
 
-  const PROD_DOMAIN_NAME = 'miladyandmilady.com';
-  const PROD_SUBJECT_ALTERNATIVE_NAMES = ['www.miladyandmilady.com'];
+  const PROD_DOMAIN_NAME = 'lexpunk.pro';
+  const PROD_SUBJECT_ALTERNATIVE_NAMES = ['www.lexpunk.pro'];
 
   export class MetalexPipelineStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
